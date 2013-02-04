@@ -96,6 +96,61 @@
 <h1>Homework</h1>
 </article>
 
+<article class="slide slide-list">
+	<h2>Homework Review</h2>
+	<script>
+(function($){
+ 
+    $.fn.shuffle = function() {
+ 
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+ 
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+ 
+        return $(shuffled);
+ 
+    };
+ 
+})(jQuery);
+
+function shuffleHomework(amt) {
+	if(amt <= 0) return;
+	$("#homework li").shuffle();
+	setTimeout(function() { shuffleHomework(amt - 1); },200);
+}
+
+	</script>
+	<a href='javascript:shuffleHomework(10);'>Shuffle</a>
+	<ul id='homework'>
+		<li><a href='http://carljbowman.github.com/homework/index.html'>Carl Bowman</a></li>
+		<li><a href='http://jlfarnham.github.com/homework/index.html'>Jules Farnham</a></li>
+		<li><a href='http://brendongouveia.github.com/homework/index.html'>Brendon Gouveia</a></li>
+		<li><a href='http://zkgray.github.com/homework/index.html'>Zoya Gray</a></li>
+		<li><a href='http://carsonhalstead.github.com/homework/index.html'>Carson Halstead</a></li>
+		<li><a href='http://leehouse.github.com/homework/index.html'>Lee House</a></li>
+		<li><a href='http://jhoustova.github.com/homework/index.html'>Jarmila Houstova</a></li>
+		<li><a href='http://mclauer.github.com/homework/index.html'>Maria Lauer</a></li>
+		<li><a href='http://caseymcgee.github.com/homework/index.html'>Casey McGee</a></li>
+		<li><a href='http://katherinemclean.github.com/homework/index.html'>Katherine McLean</a></li>
+		<li><a href='http://jrraichek.github.com/homework/index.html'>Jennifer Raichek</a></li>
+		<li><a href='http://chrisskinner.github.com/homework/index.html'>Christopher Skinner</a></li>
+		<li><a href='http://jenellevalencia.github.com/homework/index.html'>Jenelle Valencia</a></li>
+		<li><a href='http://youngshimgontijo.github.com/homework/index.html'>Youngshim Gontijo</a></li>
+		<li><a href='http://jaelee.github.com/homework/index.html'>Sukjae Lee</a></li>
+
+	</ul>
+</article>
 
 
 <article class='slide slide-list'>
