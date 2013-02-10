@@ -87,8 +87,8 @@
 <article class='slide slide-subhead'>
 <h1>CSS Layout</h1>
 <h2>Week 5</h2>
-<p>CDGD304 - Fall 2012<br/>
- <a href='http://marthar.github.com/webfall-2012/5.html'>http://marthar.github.com/webfall-2012/5.html</a></p>
+<p>CDGD304 - Spring 2013<br/>
+ <a href='http://marthar.github.com/webfall-2012/5.html'>http://marthar.github.com/webspring-2013/5.html</a></p>
 </article>
 	
 <article class='slide slide-list'>
@@ -163,20 +163,22 @@ function shuffleHomework(amt) {
 	</script>
 	<a href='javascript:shuffleHomework(10);'>Shuffle</a>
 	<ul id='homework'>
-		<li><a href='http://heathermendonca.github.com/homework/index.html'>heathermendonca</a></li>
-		<li><a href='http://jmfisherr.github.com/homework/index.html'>jmfisherr</a></li>
-		<li><a href='http://yeesusanna.github.com/homework/index.html'>yeesusanna</a></li>
-		<li><a href='http://krhogan.github.com/homework/index.html'>krhogan</a></li>
-		<li><a href='http://nopsketchbook.github.com/homework/index.html'>nopsketchbook</a></li>
-		<li><a href='http://lkfenton.github.com/homework/index.html'>lkfenton</a></li>
-		<li><a href='http://bejohnston.github.com/homework/index.html'>bejohnston</a></li>
-		<li><a href='http://annacolleenc.github.com/homework/homework.html'>annacolleenc</a></li>
-		<li><a href='http://hisakanishibayashi.github.com/homework/index.html'>hisakanishibayashi</a></li>
-		<li><a href='http://marthabarry.github.com/homework/index.html'>marthabarry</a></li>
-		<li><a href='http://trwhite.github.com/homework/index.html'>trwhite</a></li>
-		<li><a href='http://themusicmaker.github.com/homework/index.html'>themusicmaker</a></li>
-		<li><a href='http://ktengprawat.github.com/homework/index.html'>ktengprawat</a></li>
-		<li><a href='http://digihex.github.com/homework/index.html'>digihex</a></li>
+		<li><a href='http://carljbowman.github.com/homework/index.html'>Carl Bowman</a></li>
+		<li><a href='http://jlfarnham.github.com/homework/index.html'>Jules Farnham</a></li>
+		<li><a href='http://brendongouveia.github.com/homework/index.html'>Brendon Gouveia</a></li>
+		<li><a href='http://zkgray.github.com/homework/index.html'>Zoya Gray</a></li>
+		<li><a href='http://carsonhalstead.github.com/homework/index.html'>Carson Halstead</a></li>
+		<li><a href='http://leehouse.github.com/homework/index.html'>Lee House</a></li>
+		<li><a href='http://jhoustova.github.com/homework/index.html'>Jarmila Houstova</a></li>
+		<li><a href='http://mclauer.github.com/homework/index.html'>Maria Lauer</a></li>
+		<li><a href='http://caseymcgee.github.com/homework/index.html'>Casey McGee</a></li>
+		<li><a href='http://katherinemclean.github.com/homework/index.html'>Katherine McLean</a></li>
+		<li><a href='http://jrraichek.github.com/homework/index.html'>Jennifer Raichek</a></li>
+		<li><a href='http://chrisskinner.github.com/homework/index.html'>Christopher Skinner</a></li>
+		<li><a href='http://jenellevalencia.github.com/homework/index.html'>Jenelle Valencia</a></li>
+		<li><a href='http://youngshimgontijo.github.com/homework/index.html'>Youngshim Gontijo</a></li>
+		<li><a href='http://jaelee.github.com/homework/index.html'>Sukjae Lee</a></li>
+
 	</ul>
 </article>
 
@@ -760,27 +762,6 @@ body {
 	</pre>
 </article>	
 
-<article class="slide slide-list">
-<h1>Nitty Gritty</h1>
-	<ul>
-		<li class="slide">
-			<h3>Using HTML5 tags - use a shiv<br/> <a href="http://code.google.com/p/html5shiv/">http://code.google.com/p/html5shiv/</a><br/>
-				(Or Modernizr, which we’ll discuss later)</h3>
-		</li>
-		<li class="slide">
-			<h3>Link to your stylesheet with a link tag in your &lt;head&gt;:<br/> 
-				<pre>&lt;link type=‘text/css’ rel=‘stylesheet’ href=‘style.css’ /&gt;</pre>
-			</h3>
-		</li>
-	</ul>
-</article>
-
-<article class="slide slide-subhead">
-<h1>Beginner Mistakes</h1>
-	<h3><a href="http://css-tricks.com/css-beginner-mistakes-1/">Beware of Divitus and Classitus</a></h3>
-</article>
-
-
 
 <article class="slide slide-list">
 <h1>Basic Chop 101</h1>
@@ -863,6 +844,340 @@ footer#site-footer {     clear:both; background-color:black;     color:white
 .clearfix { display: inline-block; }
   html[xmlns] .clearfix { display: block; }
   * html .clearfix { height: 1%; }</pre>
+</article>
+
+
+
+<article class='slide slide-accent'>
+	<h1>Drop-Downs</h1>
+</article>
+
+<article class='slide slide-list'>
+<h2>Basic Navbar</h2>
+<p>hidden dropdown</p>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:20px;
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+</textarea>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Nav Drop-Down</h2>
+<p>Adding :hover selector</p>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:30px;
+	left:-41px;
+}
+
+#menu li:hover ul {
+	display:block;
+	
+}
+
+#menu li ul li{  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 4px 17px 4px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+
+</textarea>
+</article>
+
+
+
+<article class='slide slide-accent'>
+	<h1>CSS3</h1>
+</article>
+
+<article class="slide slide-list">
+	<h1>CSS3 Properties</h1>
+	<ol>
+		<li class='slide'>
+      <h3>border-radius</h3>
+		</li>	
+		<li class="slide">
+      <h3>box-shadow</h3>
+		</li>
+		<li class="slide">
+      <h3>text-shadow</h3>
+		</li>
+		<li class="slide">
+    <h3><a href='http://www.html5rocks.com/en/tutorials/flexbox/quick/'>flexbox</a></h3>
+		</li>
+		<li class="slide">
+    <h3>rgba</h3>
+		</li>
+		<li class="slide">
+    <h3><a href='http://www.colorzilla.com/gradient-editor/'>background gradients</a></h3>
+		</li>
+	</ol>	
+</article>	
+
+
+<article class='slide slide-image'>
+<h1><img src="images/polaroid.png" class='top-image'/>Let's make a polaroid</h1>
+</article>
+
+<article class='slide slide-list'>
+<h3>Using</h3>
+<ul>
+	<li><h3>-webkit-transform: rotate(#deg)</h3></li>	
+	<li><h3>border-radius: #</h3></li>
+	<li><h3>box-shadow: left  bottom  spread  color</h3></li>
+	<li><h3>text-shadow: #</h3></li>
+</ul>	
+</article>
+
+<article class='slide slide-list'>
+  <h1>Let's make a polaroid</h1>
+  <p>Let's make a polaroid (<a href='http://www.flickr.com/photos/snowpeak/4152675183/'>Image Source</a>)</p>
+  <textarea class='coder-editor coder-editor-instant'>
+<style>
+  .container { text-align:center; padding-top:30px;}
+  .polaroid {
+    display:inline-block;
+    width: 282px;
+    font-size:1.2em;
+    color:#444;
+    font-family:times;
+    font-weight:bold;
+ 
+</style>
+<div class='container'>
+  <div class='polaroid'>
+   <img src='images/birds.jpg'>
+    Those are some crazy birds!
+  </div>
+</div>
+
+  </textarea>
+<script type='coder-solution'>
+<style>
+  .container { text-align:center; padding-top:30px;}
+  .polaroid {
+    display:inline-block;
+    width: 282px;
+    border:1px solid #eee;
+    border-radius:4px;
+    padding:10px 10px 30px 10px;
+    box-shadow:5px 5px 10px #CCC;
+    -webkit-transform:rotate(15deg);
+    font-size:1.3em;
+    color:#444;
+    background-color:#f3f3f3;
+    font-family: Chalkboard, cursive;
+    font-style:italic;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-shadow:1px 1px #fff;
+  }
+  img { margin-bottom:10px; }
+  
+</style>
+<div class='container'>
+  <div class='polaroid'>
+   <img src='images/birds.jpg'>
+    Those are some <br/>crazy birds!
+  </div>
+</div>
+
+</script>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>CSS Transitions Example</h2>
+<a href='http://css3.bradshawenterprises.com/all/'>More Examples</a>
+<textarea class='coder-editor'>
+<style>
+  #box {
+    transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    -ms-transition: background-clor 2s;
+    -o-transition: background-color 2s;
+    width:50px;
+    height:50px;
+    background-color:green;
+  }
+
+  #box:hover {
+    background-color:red;
+
+  }
+</style>
+<div id='box'></div>
+
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+  <h2>CSS3 Animations</h2>
+  <ul>
+  	<li class="slide">
+  		<h3>Are defined with keyframes</h3>
+  	</li>
+  	<li class="slide">
+  		<h3>Have a name</h3>
+  	</li>
+  	<li class="slide">
+  		<h3>Can have a number of other properties including direction, repeat, duration</h3>
+  	</li>
+  	<li class="slide">
+    <h3><a href='http://www.w3.org/TR/css3-animations/'>See the spec</a></h3>
+  	</li>
+  </ul>
+</article>
+
+<article class='slide slide-list'>
+  <h2>CSS3 Animations Example</h2>
+  <p>You'll need all your prefixes here! (-webkit, -moz, -ms) - only showing webkit for brevity</p>
+<textarea class='coder-editor'>
+<style>
+
+  @-webkit-keyframes coloranim {
+    0% {
+      background-color:green;
+    }
+    50% {
+      background-color:red;
+    }
+    100% {
+      background-color:blue;
+    }
+  }
+
+  #box:hover { 
+    -webkit-animation-name:none;
+  }
+
+  #box {
+    background-color:black;
+    width:50px;
+    height:50px;
+    -webkit-animation-name: coloranim;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 4;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+</style>
+<div id='box'></div>
+</textarea>
 </article>
 
 <article class="slide slide-image">
