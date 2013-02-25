@@ -622,25 +622,208 @@ p {
 
 
 
+article class='slide slide-accent'>
+	<h1>Let's Talk Layout</h1>
+</article>
+
 <article class="slide slide-list">
-<h1>Nitty Gritty</h1>
+<h1>Layout Properties</h1>
+<ul>
+<li class="slide">
+	<h3>Box model: margin, padding, width, height</h3>
+</li>
+<li class="slide">
+	<h3>top, bottom, left, right</h3>
+</li>
+<li class="slide">
+	<h3>border</h3>
+</li>
+<li class="slide">
+	<h3>position [ static, relative, absolute ]</h3>
+</li>
+<li class="slide">
+	<h3>ﬂoat [ left, right, none ], clear [ left, right, both]</h3>
+</li>
+<li class="slide">
+	<h3>display [none, block, inline inline-block]</h3>
+</li>
+<li class="slide">
+	<h3>visibility [visible, hidden]</h3>
+</li>
+<li class="slide">
+	<h3>background (color, image, repeat, position)</h3>
+</li>
+</ul>
+</article>
+
+<article class='slide slide-accent'>
+	<h1>Box Model</h1>
+</article>
+
+
+<article class='slide slide-image'>
+<h1>Layout = Box Model</h2>
+<img src='images/layout.jpg'/>
+</article>
+
+<article class="slide slide-list">
+<h1>Layout Properties</h1>
+<ul>
+<li class="slide">
+	<h3>Content:text the tags are wrapping</h3>
+		<ul>
+			<li>color:red;</li>
+			<li>font-size:20px;</li>
+			<li>text-transform:uppercase;</li>
+		</ul>	
+</li>
+<li class="slide">
+	<h3>Padding:color behind the text</h3>
+	<ul>
+		<li>padding-top:5px; (-left, -right, -top, -bottom)</li>
+		<li>padding:5px 10px;</li>
+		<li>padding:5px 3px 10px 20px;</li>
+	</ul>	
+	
+</li>
+<li class="slide">
+	<h3>Border:line around the padding</h3>
+	<ul>
+		<li>border-style:solid;</li>
+		<li>border-width:5px;</li>
+		<li>border-color:red;</li>
+		<li>border:5px solid red;</li>
+	</ul>
+</li>
+<li class="slide">
+	<h3>Margin:transparent space around the padding and boarder</h3>
+	<ul>
+		<li>margin-top:5px; (-left, -right, -top, -bottom)</li>
+		<li>margin:5px 10px;</li>
+		<li>margin:5px 3px 10px 20px;</li>
+	</ul>
+</li>
+</ul>
+</article>
+
+<article class='slide slide-list'>
+<h2>Box Model Exercise</h2>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='S2012-blog-post-chop'>
+<style>
+  #box1 { 
+    background-color:teal;
+  }
+
+  #box2 { 
+    background-color:orange;
+  }
+
+
+</style>
+
+<div id="box1">I'm a box</div>
+<div id="box2">I'm a box 2!</div>
+</textarea>
+</article> 
+
+
+<article class='slide slide-accent'>
+	<h1>How do you layout elements on the page?</h1>
+</article>
+
+
+<article class="slide slide-list">
+<h1>Only two ways to layout:</h1>
 	<ul>
 		<li class="slide">
-			<h3>Using HTML5 tags - use a shiv<br/> <a href="http://code.google.com/p/html5shiv/">http://code.google.com/p/html5shiv/</a><br/>
-				(Or Modernizr, which we’ll discuss later)</h3>
+    <h3>1. Using floats to align things next to each other</h3>
 		</li>
 		<li class="slide">
-			<h3>Link to your stylesheet with a link tag in your &lt;head&gt;:<br/> 
-				<pre>&lt;link type=‘text/css’ rel=‘stylesheet’ href=‘style.css’ /&gt;</pre>
-			</h3>
+			<h3>2. Use “position:absolute; top:...; left:....” inside of a positioned container.</h3>
+		</li>
+    <style>
+.position-example { 
+  -webkit-transition: -webkit-transform 1s linear; 
+  -webkit-transform: translate(0,0) rotate(0deg); }
+.position-example.deck-current {
+ -webkit-transform: translate(30px,250px) rotate(15deg);
+}
+    </style>
+		<li class="position-example slide">
+    <h3 style=''>(I lied) 3. you can use transforms - but let's ignore those for now</h3>
 		</li>
 	</ul>
 </article>
 
-<article class="slide slide-subhead">
-<h1>Beginner Mistakes</h1>
-	<h3><a href="http://css-tricks.com/css-beginner-mistakes-1/">Beware of Divitus and Classitus</a></h3>
+<article class="slide slide-list">
+<h1>Layout with floats</h1>
+<h3>Use this for content, page elements that need to flow or resize</h3><br/>
+	<ul>
+		<li class="slide">
+    <h3>Use float:left or float:right to float elements</h3>
+		</li>
+		<li class="slide">
+    <h3>Make sure that elements have a width - floating will squeze elements down</h3>
+		</li>
+		<li class="slide">
+    <h3>Make sure to clear your floats otherwise the container won't have a height</h3>
+		</li>
+		<li class="slide">
+    <h3>You need an extra element to clear, or can use the clearfix</h3>
+		</li>
+	</ul>
 </article>
+
+<article class='slide slide-list'>
+<h2>Float Exercise</h2>
+<h3>navs are a great example of floating elements - we'll make this from a list</h3>
+<h3><img src="images/nav-floats.png"/></h3>
+</article>
+
+<article class='slide slide-list'>
+<h2>Float Exercise</h2>
+<textarea class='coder-editor coder-editor-split coder-editor-instant' >
+<style>
+
+
+</style>
+
+<nav>
+  <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>shop</li>
+    <li>contact</li>
+  </ul>
+</nav>
+</textarea>
+<script type='coder-solution'>
+<style>
+  li {
+    list-style:none;
+    float:left;
+    margin:10px;
+    background-color:teal;
+    padding:7px 14px;
+    color:white;
+    text-transform:uppercase;
+    font-family:Helvetica;
+  }
+
+
+</style>
+
+<nav>
+  <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>shop</li>
+    <li>contact</li>
+  </ul>
+</nav>
+</script>
+
+</article> 
 
 
 
@@ -670,13 +853,13 @@ p {
 	<h3 class='slide'>Coding</h3>
        <ul class='slide'>
 			<li>
-				<h3>Style the Layout of your Recipe card (create a css sheet, add in class &amp; id hooks to your html if needed)</h3>				
+				<h3>Style your Recipe card (create a css sheet, add in class &amp; id hooks to your html if needed)</h3>				
 			</li>
 			<li>
-				<h3>Style the Layout of  Cats vs. Dogs (we'll apply formatting style later)</h3>
+				<h3>Style  Cats vs. Dogs (we'll apply layout  style later)</h3>
 			</li>
 			<li>
-				<h3>Style the Layout of  Llama Love</h3>
+				<h3>Style &amp; Layout of  Llama Love</h3>
 			</li>
 		</ul>
 </ul>	
