@@ -98,9 +98,6 @@
 			<h3>Review Homework</h3>
 		</li>
 		<li class="slide">
-			<h3>Discuss Readings</h3>
-		</li>
-		<li class="slide">
 			<h3>CSS Layout</h3>
 		</li>
 		<li class="slide">
@@ -113,7 +110,10 @@
 			<h3>Position</h3>
 		</li>
 		<li class="slide">
-			<h3>Excercises</h3>
+			<h3>Exercises</h3>
+		</li>
+		<li class="slide">
+			<h3>CSS3</h3>
 		</li>
 		<li class="slide">
 			<h3>Homework</h3>
@@ -177,177 +177,13 @@ function shuffleHomework(amt) {
 		<li><a href='http://chrisskinner.github.com/homework/index.html'>Christopher Skinner</a></li>
 		<li><a href='http://jenellevalencia.github.com/homework/index.html'>Jenelle Valencia</a></li>
 		<li><a href='http://youngshimgontijo.github.com/homework/index.html'>Youngshim Gontijo</a></li>
-		<li><a href='http://jaelee.github.com/homework/index.html'>Sukjae Lee</a></li>
-
 	</ul>
 </article>
 
 
-<article class='slide slide-list'>
-<h2>Readings</h2>
-	<ul>
-		<li>
-			<h3><a href='http://www.alistapart.com/articles/designingforflow/'>Designing for Flow</a>
-	</h3>
-</li>
-<li>
-              <h3><a href='http://www.alistapart.com/articles/the-case-for-content-strategy-motown-style/'>The Case for Content Strategy</a>
-	</h3>
-		</li>
-	</ul>		
-</article>
-
 
 <article class='slide slide-accent'>
-	<h1>Let's Talk CSS</h1>
-</article>
-
-<article class="slide slide-list">
-<h1>Cascading Style Sheets</h1>
-<ul>
-<li class="slide">
-	<h3>Used for “presentation” of your HTML</h3>
-</li>
-<li class="slide">
-	<h3>Controls the styles of your page</h3>
-</li>
-<li class="slide">
-	<h3>Also Controls the layout of your page (where stuff is positioned)</h3>
-</li>
-<li class="slide">
-	<h3>Can have different styles different media formats (eg. print, screen, mobile)</h3>
-</li>
-</ul>
-</article>
-
-<article class="slide slide-image">
-<h1>What is a style?</h1>
-<img src='images/css.png'/>
-</article>
-
-<article class='slide slide-list'>
-	<h1>We Pick a Selector</h1>
-	<p class="slide">(the part of our HTML we want to style, for example, h1, h2, p or li)<br/></p>
-		<div class="slide example"><em> h1</em> <span class='slide'> &#123; color:red; &#125;</span></div>
-		<div class="slide example"><em> h2</em> <span class='slide'> &#123; font-size:20px; &#125;</span></div>
-		<div class="slide example"><em> a</em> <span class='slide'> &#123; text-decoration:none; &#125;</span></div>
-	<p class="slide">You can also pick id or class names, as well as multiple tags- but for now let's keep it simple</em>
-	</p>
-</article>
-
-
-<article class='slide slide-list'>
-	<h1>We Make a Declaration</h1>
-	<p class="slide">(using CSS properties and values we add formatting)<br/></p>
-		<div class="slide example">h1<span class='slide'> &#123; <em> color:red; </em>&#125;</span></div>
-		<div class="slide example"> h2<span class='slide'> &#123; <em> font-size:20px;</em> &#125;</span></div>
-		<div class="slide example"> a <span class='slide'> &#123; <em> text-decoration:none; </em> &#125;</span></div>
-	<p class="slide">Remember google is your friend here's a quick <a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">cheat sheet</a>
-	</p>
-</article>
-
-<article class='slide slide-list'>
-<h2>Pay attention to your class and id names!</h2>
-<ul>
-	<li class="slide">
-		<h3>You can't use spaces.</h3>
-	</li>
-	<li class="slide">
-		<h3>You shouldn't use underscores (_) - altough technically now permitted</h3>
-	</li>
-	<li class="slide">
-		<h3>Use camelCase or dashes-to-separate-names</h3>
-	</li>
-	<li class="slide">
-		<h3>I'd recommend dashes - css uses Dashses (<em>background-color, font-family</em>), <br/>
-			Javascript uses camelCase</h3>
-	</li>
-	<li class="slide">
-		<h3>Be consistent! - easier to read and remember what you wrote.</h3>
-	</li>
-</ul>
-</article>
-
-
-<article class="slide slide-list">
-<h2>Available selectors</h2>
-<ul>
-	 <li class='slide'>
-		 <h3>name of element (e.g. <em>p, div, h1</em>)</h3>
-	</li>
-	<li class='slide'>
-		<h3>
-		class name preﬁxed with a period (.)<br/>
-		<em>HTML </em>&lt;div <span class="callout">class=‘my-class-name</span>’&gt;<span class="light"> This is my class name </span>&lt;/div&gt;<br/>
-		<em>CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><span class="callout">.my-class-name</span> {<span class="light"> font-size: 25px; </span>}
-	</h3>
-	</li>
-	<li class='slide'>
-		<h3>element id preﬁxed with a pound sign (#)<br/>
-			<em>HTML </em>&lt;div <span class="callout">id=‘my-id</span>’&gt;<span class="light"> This is my id</span>&lt;/div&gt;<br/>
-			<em>CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><span class="callout">#my-id</span> { <span class="light"> color: red;</span> }
-	</h3>
-</li>
-</ul>
-</article>
-
-
-<article class="slide slide-list">
-<h1>Properties</h1>
-<ul>
-<li class="slide">
-	<h3>There are lots of them</h3>
-</li>
-<li class="slide">
-	<h3>Two Primary types: Layout, Style<br/>
-	(Padding is layout, color is style)</h3>
-</li>
-<li class="slide">
-	<h3>Style generally inherit, Layout don’t</h3>
-</li>
-<li class="slide">
-	<h3>Sometimes can be combined into one: e.g.<br/>
-	<em>font = font-family, font-style, font-variant, ...</em><br/>
-	<em>background = background-color, background-image, background-repeat, background-attachment, background-position ...</em><br/>
-	<em>padding = padding-top, padding-right, padding-bottom, padding-left ...</em></h3>
-</li>
-<li class="slide">
-	<h3>Layout box properties go clockwise from  midnight: top, right, bottom, left</h3>
-</li>
-</ul>
-</article>
-
-
-<article class="slide slide-list">
-<h1>Values</h1>
-<ul>
-<li class="slide">
-	<h3>colors: #FFF, #FFFFFF, rgb(255,255,255), gray, black, red</h3>
-</li>
-<li class="slide">
-	<h3>numbers: 0, 25px, 1.1em, 100%<br/>
-		<em>em's are 'M' height - and these inherit (multiply)</em>
-	</h3>
-</li>
-<li class="slide">
-	<h3>“inherit” is a special property to force inheritence</h3>
-</li>
-</ul>
-</article> 
-
-
-
-<article class='slide slide-list'>
-<h2>Let's Give this a Try! </h2>
-<textarea class='coder-editor coder-editor-split coder-editor-instant' data-coder-template="coderdeck-css-playground" data-language='html'>
-<style>
-
-</style>
-</textarea>
-</article>
-
-<article class='slide slide-accent'>
-	<h1>Let's Talk Layout</h1>
+	<h1>Let's Talk CSS Layout</h1>
 </article>
 
 <article class="slide slide-list">
@@ -549,76 +385,6 @@ function shuffleHomework(amt) {
 
 </article> 
 
-<article class='slide slide-accent'>
-<h1>Navbar Excercise 1: Styling</h1>
-</article>
-
-
-<article class='slide slide-list'>
-<h2>Navbar: Make this</h2>
-<img src='images/menubar.png'/>
-<textarea class='coder-editor coder-editor-split' data-coder-template="coderdeck-plain" id='coderdeck-default'>
-<style>
-	/* Style it here */
-
-</style>
-<nav id='main-menu'>
-<ul>
-	<li>
-		<a href="#">Home</a></li>
-	<li>
-		<a href="#">About</a></li>
-	<li>
-		<a href="#">Blog</a></li>
-	<li class='last'>
-		<a href="#">Contact</a></li>
-</ul>
-</nav>
-</textarea>
-<script type='coder-solution'>
-<style>
-/* Style it here */
-#main-menu  {
-    position:absolute;
-    top:20px;
-    right:20px;
-    background-color:teal;
-    float:right;
-    border-radius:5px;
-    box-shadow:4px 4px 4px #ddd;
-    padding:0 10px;
-    margin:0 20px;
- }
-  #main-menu li { 
-    float:left; 
-    border-right:3px solid #fff;
-  }
-  #main-menu li.last { border:0px; }
-  #main-menu li a { display:block; 
-    padding:15px 15px;
-    font-size:17px;
-    color:white;
-    font-family:sans-serif;
-    text-transform:uppercase;
-    text-decoration:none;
-  }
-  #main-menu li a:hover { background-color:#DDD; }
-</style>
-<nav id='main-menu'>
-<ul>
-	<li>
-		<a href="#">Home</a></li>
-	<li>
-		<a href="#">About</a></li>
-	<li>
-		<a href="#">Blog</a></li>
-	<li class='last'>
-		<a href="#">Contact</a></li>
-</ul>
-</nav>
-</script>
-</article>
-
 
 
 
@@ -810,6 +576,137 @@ Below Container
 </div>
 </textarea>
 </article> 
+
+
+<article class='slide slide-accent'>
+<h1>Navbar Excercise 1: Styling</h1>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Navbar: Make this</h2>
+<img src='images/menubar.png'/>
+<textarea class='coder-editor coder-editor-split' data-coder-template="coderdeck-plain" id='coderdeck-default'>
+<style>
+	/* Style it here */
+
+</style>
+<nav id='main-menu'>
+<ul>
+	<li>
+		<a href="#">Home</a></li>
+	<li>
+		<a href="#">About</a></li>
+	<li>
+		<a href="#">Blog</a></li>
+	<li class='last'>
+		<a href="#">Contact</a></li>
+</ul>
+</nav>
+</textarea>
+<script type='coder-solution'>
+<style>
+/* Style it here */
+#main-menu  {
+    position:absolute;
+    top:20px;
+    right:20px;
+    background-color:teal;
+    float:right;
+    border-radius:5px;
+    box-shadow:4px 4px 4px #ddd;
+    padding:0 10px;
+    margin:0 20px;
+ }
+  #main-menu li { 
+    float:left; 
+    border-right:3px solid #fff;
+  }
+  #main-menu li.last { border:0px; }
+  #main-menu li a { display:block; 
+    padding:15px 15px;
+    font-size:17px;
+    color:white;
+    font-family:sans-serif;
+    text-transform:uppercase;
+    text-decoration:none;
+  }
+  #main-menu li a:hover { background-color:#DDD; }
+</style>
+<nav id='main-menu'>
+<ul>
+	<li>
+		<a href="#">Home</a></li>
+	<li>
+		<a href="#">About</a></li>
+	<li>
+		<a href="#">Blog</a></li>
+	<li class='last'>
+		<a href="#">Contact</a></li>
+</ul>
+</nav>
+</script>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Positioning Playground</h2>
+<p> Static vs. Relative vs. Absolute vs. Fixed</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant' data-language='html'>
+<p>Here's a paragraph of text before!</p>
+<div id='box1' class='box'>
+  <div id='box2' class='box'>
+    <div id='box3' class='box'>
+     <div id='box4' class='box'>
+     </div>
+    </div>
+  </div>
+</div>
+<p>Here's a paragraph of text after!</p>
+<style>
+   html, body { height: 100%; }
+  .box { width:50%; height:50%; opacity:0.9; }
+  #box1 { background-color:blue; }
+  #box2 { background-color:red; }
+  #box3 { background-color:green; }
+  #box4 { background-color:orange; }
+</style>
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+<h1>Only way to position stuff? No</h1>
+<ul>
+	<li class="slide">
+  <h3>Stuff next to other stuff?</h3> 
+	</li>
+  <li class="slide">
+  <h3>Floats: move stuff left or right next to each other</h3>
+  </li>
+  <li class="slide">
+  <h3>Display: inline, inline-block, block</h3>
+  </li>
+</ul>
+</article>
+
+<article class='slide slide-list'>
+<h2>Display Playground</h2>
+<p>Floats, clears, inline, inline-block, block</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant' data-language='html'>
+<div id='wrapper'>
+  <div id='div1'>Here's a div before</div>
+  <span id='span1'>Here's a span of text before!</span>
+  <span id='span2'>Here's another span of somewhat longer text that is going right here</span>
+  <span id='span3'>Here's a span of text after!</span>
+  <div id='div2'>Here's a div after</div>
+</div>
+<style>
+  body { font-size:2em; }
+  span { background-color: pink; }
+  #wrapper { background-color:rgba(200,200,200,0.7); }
+</style>
+</textarea>
+</article>
 
 
 <article class='slide slide-accent'>
